@@ -1,17 +1,29 @@
 #include <iostream>
 
-// Function, named 'main', that returns a integer value.
+// this will prevent me having to add the namespace onto each individual method or variable...
+using namespace std;
+
 int main() {
-//    anything between the {} will be run when the main() is invoked by our function. This is called a CODE BLOCK. Each line of syntax is an instruction and these are completed from top to bottom.
+//    we can use variables to hold reusable values to make our programs less static and easier to maintain. Variables are a type of container.
 
-    std::cout << "Hello, World!" << std::endl; // cout = 'console out'
-    std::cout << "My name is Charles." << std::endl; // endl = 'end line'
+// when we define a variable in C++, we start to specifying its type, then its name and then, optionally, its initial value
 
-    std::cout << "   /|" << std::endl;
-    std::cout << "  / |" << std::endl;
-    std::cout << " /  |" << std::endl;
-    std::cout << "/_ _|" << std::endl;
+// don't forget your ; to end the statement!
+std::string characterName = "Ash";
 
-//    this terminate the main() function
+int characterAge;
+characterAge = 11;
+
+// now lets use our variables in our printed story
+// notice that we use << to insert the value into the output string
+    std::cout << "There once was a man named " << characterName << std::endl;
+    std::cout << "He was " << characterAge << " years old" << std::endl;
+
+//    we can also update our variable, halfway through the story
+characterName = "Richie";
+
+    std::cout << "He liked the name " << characterName << std::endl;
+    std::cout << "But did not like being " << characterAge << std::endl;
+
     return 0;
 }
